@@ -15,13 +15,13 @@
 	<form method=POST>
 		<div class="input-group">
 			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-			<input id="user" type="text" class="form-control well-sm input-lg" name="email"
+			<input id="user" type="text" class="form-control well-sm input-lg" name="user"
 				placeholder="Username">
 		</div>
 		<div class="input-group">
 			<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 			<input id="pass" type="text" class="form-control well-sm input-lg"
-				name="password" placeholder="Password">
+				name="pass" placeholder="Password">
 		</div>
 		 <button name="sub" type="submit" class="btn btn-default">Submit</button>
 	</form>
@@ -55,6 +55,7 @@
                     if ($row["password"] != $pass) {
                         echo '<script>alert("Username does not match password")</script>';
                     } else {
+                        echo "connected";
                         session_start();
                         $_SESSION["username"] = $name;
                         header("Location: search_page.php");
