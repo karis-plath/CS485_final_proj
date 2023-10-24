@@ -9,7 +9,15 @@
 
 </head>
 <body>
-<h1>You made it</h1>
+<nav class="navbar fixed-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">Photo Flora</a>
+  <a> </a>
+</nav>
+<div class="input-group">
+  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  <button type="button" class="btn btn-outline-primary">search</button>
+</div>
+
 </body>
 <?php
 ?>
