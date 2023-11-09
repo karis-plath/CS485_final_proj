@@ -5,8 +5,7 @@
 <meta charset="UTF-8">
 <meta name="author" content="Karis and Lindsey">
 <link rel="stylesheet" href="Style_sheet.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <title>Login</title>
 </head>
 <div class="d-flex justify-content-center container">

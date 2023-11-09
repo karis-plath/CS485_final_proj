@@ -1,0 +1,16 @@
+.nav{
+	background-color: rgb(86, 129, 111);
+	justify-content: center;
+	display: flex;
+	height: 58px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
