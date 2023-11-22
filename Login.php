@@ -10,6 +10,8 @@
 </head>
 <div class="d-flex justify-content-center container">
 
+  <body id ="blur">
+        <div id ="clear">
 <h1>Login</h1>
 	<form method=POST>
 		<div class="input-group">
@@ -22,10 +24,59 @@
 			<input id="pass" type="text" class="form-control well-sm input-lg"
 				name="pass" placeholder="Password">
 		</div>
-		 <button name="sub" type="submit" class="btn btn-default">Submit</button>
+		 <button name="sub" type="submit" class="btn btn-default">Login</button>
+		  <button name="submitNew" type="submit" class="btn btn-default">Create New User</button>
 	</form>
 </div>
+</div>
     <?php
+
+    // Report all error information on the webpage
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    // submitting new user and pass
+    if (isset($_POST["submitNew"])) {
+        $servername = "localhost";
+        $username = "root"; // user name
+        $password = "111111"; // password used to login MySQL server
+        $dbname = "cs485_labs";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // db location, user, passwd, database
+
+        if ($db->connect_errno > 0) {
+            die('Unable to connect to database [' . $db->connect_error . ']');
+        } else {
+            $user = $_POST["user"]; // turn into string taken from https://www.geeksforgeeks.org/php-strval-function/#:~:text=The%20strval()%20function%20is,or%20double)%20to%20a%20string.
+            $pass = $_POST["pass"];
+
+            $check = 0; // if this is >0 then there is already a usersame with that user input
+            $sql = "SELECT username FROM login";
+            $result = $db->query($sql);
+
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while ($row = $result->fetch_assoc()) { // info about query"https://www.w3schools.com/php/php_mysql_select.asp
+                    if ($row["username"] == $user) {
+                        $check = 1;
+                        echo '<script>alert("Username already exists")</script>';
+                    }
+                }
+            }
+
+            if ($check == 0) {
+                $sql_insert = "INSERT INTO loginTable (username, pass) " . "VALUES ('" . $user . "', '" . $pass . "')"; // syntax
+                $db->query($sql_insert) or die('Sorry, database operation was failed');
+                session_start();
+                $_SESSION["username"] = $user;
+                header("Location:search_page.php");
+                exit();
+            }
+        }
+        $db->close();
+    }
+
     if (isset($_POST['sub'])) {
         $servername = "localhost";
         $username = "root"; // user name
@@ -70,4 +121,5 @@
         $conn->close();
     }
     ?> 
+    </body>
 </html>
