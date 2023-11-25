@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="Style_sheet.css" />
 
 <header id= "bar">
-<h1>
+<h1 style = "margin-top:0px; margin-left:0px; margin-right:0px;">
 <?php
 session_start();
 $user = $_SESSION["username"];

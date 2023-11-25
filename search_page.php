@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head style = "margin-top:0px;">
 
 <meta charset="utf-8">
 
@@ -15,10 +15,8 @@
         
 	  <?php
 include ("menu.php")?>
-		<div class="bg-image">
-			<img
-				src="https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/t/c/TCP-Longleaf-Roberto-Gonzalez.jpg?crop=0%2C175%2C3000%2C1650&wid=2000&hei=1100&scl=1.5"
-				class="w-100" />
+
+		<div class="container">
 			<div
 				class="mask justify-content-center flex-column text-center"
 				style="background-color: hsla(0, 0%, 98%, 0.6)">
@@ -26,9 +24,9 @@ include ("menu.php")?>
 
 
 				<!-- search -->
+				<div class="row">
 				<form method=POST>
-				<div
-					class="input-group d-flex col-xs-4 content-justify-center container centered">
+				<div class="col input-group flex-column content-justify-center centered">
 					<input type="text" class="form-control input-lg" name="searchBox"
 						placeholder="Search For Plant">
 					<div class="input-group-addon">
@@ -40,23 +38,46 @@ include ("menu.php")?>
 </svg>
 						</button>
 						</div>
-							<div class="dropdown input-group-addon">
+						</div>
+						
+					</form>
+						</div>
+	
+						
+						<div class="row dropdown">  
+							<div class="input-group-addon">
  						 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    							 Filter
   						</button>
- 						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-  						<a class="dropdown-item" href="#">Action</a>
-    					<a class="dropdown-item" href="#">Another action</a>
-    					<a class="dropdown-item" href="#">Something else here</a>
-  						</div>
   						
+ 						<div class="col">
+ 						<p> Stem </p>
+ 					<p> Color </p>
+  						 <input type="checkbox" id="color_brown" name="color_brown" value="color_brown">
+  						<label for="color_brown"> Brown </label><br>
+ 						<input type="checkbox" id="color_green" name="color_green" value="color_green">
+  						<label for="color_green"> Green </label><br>
+  						<input type="checkbox" id="color_red" name="color_red" value="color_red">
+  						<label for="color_red"> Red </label><br><br>
+  						</div>
+  					<div class="col">
+  						 <p> type </p>
+  						 <input type="checkbox" id="color_brown" name="color_brown" value="color_brown">
+  						<label for="color_brown"> Smooth </label><br>
+ 						<input type="checkbox" id="color_green" name="color_green" value="color_green">
+  						<label for="color_green"> Hairy </label><br>
+  						<input type="checkbox" id="color_red" name="color_red" value="color_red">
+  						<label for="color_red"> Course </label><br><br>
+  						</div>
+  						</div>
 					</div>
 					</div>
-						</form>
 					
 						<p id="data"></p>
-					</div>
+						</div> 
 					
+						
+				
 					<script>
 					
 //                 $("form").submit(
@@ -73,11 +94,7 @@ include ("menu.php")?>
 //                     }
 //                 );
             </script>
-				</div>
-
-			</div>
-
-		</div>
+				
 	
 </body>
 <?php

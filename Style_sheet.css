@@ -47,3 +47,27 @@
     padding: 50px;
     backdrop-filter: blur(8px);
 }
+body{
+	background-image: url('https://natureconservancy-h.assetsadobe.com/is/image/content/dam/tnc/nature/en/photos/t/c/TCP-Longleaf-Roberto-Gonzalez.jpg?crop=0%2C175%2C3000%2C1650&wid=2000&hei=1100&scl=1.5');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height:100%;
+}
+
+
+.navbar {
+         height: 100%;
+}
+
+.navbar-nav {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            
+}
+.navbar-collapse{
+	padding-right:0px;
+	padding-left:0px;
+}
+
+
