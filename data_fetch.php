@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch data from the database
-$sql = "SELECT Name FROM Plant";
+$sql = "SELECT PlantID, Name FROM Plant";
 $result = $conn->query($sql);
 
 // Store the result in an associative array

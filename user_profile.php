@@ -29,14 +29,22 @@ xhr.onreadystatechange = function () {
             var data = JSON.parse(xhr.responseText);
 
             var dataContainer = document.getElementById("data-container");
-            dataContainer.innerHTML = "<h2>data</h2>";
+            dataContainer.innerHTML = "<h2>Data</h2>";
 
             data.forEach(function (item) {
-                // Access the properties of the object and construct HTML
-                var htmlString = "<button>" + item.Name + "</button><br>";
+                // Create a button element for each data item
+                var button = document.createElement("button");
+                button.innerHTML = item.Name;
 
-                // Append the HTML to the container
-                dataContainer.innerHTML += htmlString;
+                // Add an event listener to the button
+                button.addEventListener("click", function () {
+                    // Redirect to a new page with more information
+                    window.location.href = "plant_details.php?id=" + item.PlantID;
+                });
+
+                // Append the button to the container
+                dataContainer.appendChild(button);
+                dataContainer.appendChild(document.createElement("br"));
             });
             
         } else {

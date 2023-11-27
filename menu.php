@@ -17,8 +17,8 @@ $user = $_SESSION["Username"];
 		<div class="navbar-collapse" id="navbarNavAltMarkup">
 				<ul class="nav justify-content-center">
 					<li class="nav-item"><a class="nav-link" href="search_page.php">Search</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Postings</a></li>
-					<li class="nav-item"><a class="nav-link" href="user_page.php">Profile</a></li>
+					<li class="nav-item"><a class="nav-link" href="create_post.php">Post</a></li>
+					<li class="nav-item"><a class="nav-link" href="user_profile.php">Profile</a></li>
 	<li class="nav-item"><a class="nav-link" href="Login.php">Logout</a></li>
 			</ul>
 		</div>
