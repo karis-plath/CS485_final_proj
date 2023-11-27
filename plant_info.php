@@ -11,15 +11,15 @@
     </head>
 
     <?php
-    $title = $_GET['id'];
+    $Name = $_GET['id'];
     ?>
     <!-- Get updated rating and comments on page load -->
     <body onload="rate('<?php
 
-    echo $title;
+    echo $Name;
     ?>'); cmt('<?php
 
-    echo $title;
+    echo $name;
     ?>')">
         <!-- Navigation bar -->
         <?php
@@ -31,7 +31,7 @@
 
         // Get value from html file using id
         // https://www.plus2net.com/php_tutorial/variables2.php
-        $title = $_GET['id'];
+        $Name = $_GET['id'];
 
         // Set the library types
         $wishlist = 'Wishlist';

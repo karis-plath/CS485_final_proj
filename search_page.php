@@ -42,132 +42,150 @@ include ("menu.php")?>
 						
 					</form>
 						</div>
-	
+	<form method=POST>
 						<div class="container"> 
 						
 						<div class="row">  
 							<div class="dropdown">
- 						 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ 						 <button class="btn btn-secondary dropdown-toggle" type="button submit" id="dropdownMenuButton" name="filter" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    							 Filter
   						</button>
   						
  						<div class="col">
  						
  					<p> Stem Color </p>
-  						 <input type="radio" id="color_brown" name="color_brown" value="color_brown">
-  						<label for="color_brown"> Brown </label><br>
- 						<input type="radio" id="color_green" name="color_green" value="color_green">
-  						<label for="color_green"> Green </label><br>
-  						<input type="radio" id="color_red" name="color_red" value="color_red">
-  						<label for="color_red"> Red </label><br><br>
+  						 <input type="radio" id="brown" name="stem_colors[]" value="brown">
+  						<label for="brown"> Brown </label><br>
+ 						<input type="radio" id="color_green" name="stem_colors[]" value="green">
+  						<label for="green"> Green </label><br>
+  						<input type="radio" id="red" name="stem_colors[]" value="red">
+  						<label for="red"> Red </label><br><br>
   						</div>
   					<div class="col">
-  						 <p> Stem Type </p>
-  						<input type="radio" id="color_brown" name="color_brown" value="color_brown">
-  						<label for="color_brown"> Smooth </label><br>
- 						<input type="radio" id="color_green" name="color_green" value="color_green">
-  						<label for="color_green"> Hairy </label><br>
-  						<input type="radio" id="color_red" name="color_red" value="color_red">
-  						<label for="color_red"> Course </label><br><br>
-  						<input type="radio" id="thorned" name="thorned" value="thorned">
+  						 <p> Stem Texture </p>
+  						<input type="radio" id="smooth" name="stem_texture[]" value="smooth">
+  						<label for="smooth"> Smooth </label><br>
+ 						<input type="radio" id="hairy" name="stem_texture[]" value="hairy">
+  						<label for="hairy"> Hairy </label><br>
+  						<input type="radio" id="course" name="stem_texture[]" value="course">
+  						<label for="course"> Course </label><br><br>
+  						<input type="radio" id="thorned" name="stem_texture[]" value="thorned">
 						<label for="thorned"> Thorned </label><br>
-						<input type="radio" id="shag" name="shag" value="shag">
+						<input type="radio" id="shag" name="stem_texture[]" value="shag">
 						<label for="shag"> Shag </label><br>
   						</div>
   						<div class="col">
   						<p> Stem Shape </p>
-  						<input type="radio" id="branching" name="branching" value="branching">
+  						<input type="radio" id="branching" name="stem_shape[]" value="branching">
 						<label for="branching"> Branching </label><br>
-						<input type="radio" id="single" name="single" value="signle">
+						<input type="radio" id="single" name="stem_shape[]" value="single">
 						<label for="single"> Single </label><br>
   						</div>
   						
   						<div class="col">
   						<p> Leaf Edges </p>
-  						<input type="radio" id="leaf_toothed" name="leaf_toothed" value="leaf_toothed">
-						<label for="leaf_toothed"> Toothed </label><br>
-						<input type="radio" id="leaf_smooth" name="leaf_smooth" value="leaf_smooth">
-						<label for="leaf_smooth"> Smooth </label><br>
+  						<input type="radio" id="toothed" name="leaf_edges[]" value="toothed">
+						<label for="toothed"> Toothed </label><br>
+						<input type="radio" id="smooth" name="smooth" value="smooth">
+						<label for="smooth"> Smooth </label><br>
   						</div>
   						
   						<div class="col">
   						<p> Leaf Texture </p>
-  						<input type="radio" id="smooth" name="smooth" value="smooth">
+  						<input type="radio" id="smooth" name="leaf_texture[]" value="smooth">
 						<label for="smooth"> Smooth </label><br>
-						<input type="radio" id="hairy" name="hairy" value="hairy">
+						<input type="radio" id="hairy" name="leaf_texture[]" value="hairy">
 						<label for="hairy"> Hairy </label><br>
   						</div>
   						
   						<div class="col">
   						<p> Leaf Shape </p>
-  						<input type="radio" id="leaf_elipse" name="leaf_elipse" value="leaf_elipse">
-						<label for="leaf_elipse"> Elipse </label><br>
-						<input type="radio" id="leaf_lobed" name="leaf_lobed" value="leaf_lobed">
-						<label for="leaf_lobed"> Lobed </label><br>
+  						<input type="radio" id="elipse" name="leaf_shape[]" value="elipse">
+						<label for="elipse"> Elipse </label><br>
+						<input type="radio" id="lobed" name="leaf_shape[]" value="lobed">
+						<label for="lobed"> Lobed </label><br>
   						</div>
   						
   						<div class="col">
   						<p> Leaf Type </p>
-  						<input type="radio" id="leaf_compound" name="leaf_compound" value="leaf_compound">
-						<label for="leaf_compound"> Compound </label><br>
-						<input type="radio" id="leaf_simple" name="leaf_simple" value="leaf_simple">
-						<label for="leaf_simple"> Simple </label><br>
+  						<input type="radio" id="compound" name="leaf_type[]" value="compound">
+						<label for="compound"> Compound </label><br>
+						<input type="radio" id="simple" name="leaf_type[]" value="simple">
+						<label for="simple"> Simple </label><br>
   						</div>
   						
   						<div class="col">
   						<p> Flower Color </p>
-  						<input type="radio" id="flower_white" name="flower_white" value="flower_white">
-						<label for="flower_white"> White </label><br>
-						<input type="radio" id="flower_green" name="flower_green" value="flower_green">
-						<label for="flower_green"> Green </label><br>
-						<input type="radio" id="flower_yellow" name="flower_yellow" value="flower_yellow">
+  						<input type="radio" id="white" name="flower_color[]" value="white">
+						<label for="white"> White </label><br>
+						<input type="radio" id="green" name="flower_color[]" value="green">
+						<label for="green"> Green </label><br>
+						<input type="radio" id="yellow" name="flower_color[]" value="yellow">
 						<label for="flower_yellow"> Yellow </label><br>
-						<input type="radio" id="flower_orange" name="flower_orange" value="flower_orange">
-						<label for="flower_orange"> Orange </label><br>
-						<input type="radio" id="flower_red" name="flower_red" value="flower_red">
+						<input type="radio" id="orange" name="flower_color[]" value="orange">
+						<label for="orange"> Orange </label><br>
+						<input type="radio" id="red" name="flower_color[]" value="red">
 						<label for="flower_red"> Red </label><br>
-						<input type="radio" id="flower_blue" name="flower_blue" value="flower_blue">
-						<label for="flower_blue"> Blue </label><br>
+						<input type="radio" id="blue" name="flower_color[]" value="blue">
+						<label for="blue"> Blue </label><br>
+  						</div>
+  						
+  						<div class="col">
+  						<p> Flower Type </p>
+  						<input type="radio" id="crateriform" name="flower_type[]" value="crateriform">
+						<label for="crateriform"> Crateriform </label><br>
+						<input type="radio" id="campanulate" name="flower_type[]" value="campanulate">
+						<label for="campanulate"> Campanulate </label><br>
+						<input type="radio" id="cruciform" name="flower_type[]" value="cruciform">
+						<label for="cruciform"> Cruciform </label><br>
+						<input type="radio" id="rotate" name="flower_type[]" value="rotate">
+						<label for="rotate"> Rotate </label><br>
+						<input type="radio" id="ligulate" name="flower_type[]" value="ligulate">
+						<label for="ligulate"> Ligulate </label><br>
+						<input type="radio" id="catkin" name="flower_type[]" value="catkin">
+						<label for="catkin"> Catkin </label><br>
+						<input type="radio" id="urceolate" name="flower_type[]" value="urceolate">
+						<label for="urceolate"> Urceolate </label><br>
   						</div>
   						
   						<div class="col">
   						<p> Fruit Color </p>
-  						<input type="radio" id="fruit_white" name="fruit_white" value="fruit_white">
-						<label for="fruit_white"> White </label><br>
-						<input type="radio" id="fruit_green" name="fruit_green" value="fruit_green">
-						<label for="fruit_green"> Green </label><br>
-						<input type="radio" id="fruit_purple" name="fruit_purple" value="fruit_purple">
-						<label for="fruit_purple"> Purple </label><br>
-						<input type="radio" id="fruit_brown" name="fruit_brown" value="fruit_brown">
-						<label for="fruit_brown"> Brown </label><br>
-						<input type="radio" id="fruit_yellow" name="fruit_yellow" value="fruit_yellow">
-						<label for="fruit_yellow"> Yellow </label><br>
-						<input type="radio" id="fruit_black" name="fruit_black" value="fruit_black">
-						<label for="fruit_black"> Black </label><br>
+  						<input type="radio" id="white" name="fruit_color[]" value="white">
+						<label for="white"> White </label><br>
+						<input type="radio" id="green" name="fruit_color[]" value="green">
+						<label for="green"> Green </label><br>
+						<input type="radio" id="purple" name="fruit_color[]" value="purple">
+						<label for="purple"> Purple </label><br>
+						<input type="radio" id="brown" name="fruit_color[]" value="brown">
+						<label for="brown"> Brown </label><br>
+						<input type="radio" id="yellow" name="fruit_color[]" value="yellow">
+						<label for="yellow"> Yellow </label><br>
+						<input type="radio" id="black" name="fruit_color[]" value="black">
+						<label for="black"> Black </label><br>
   						</div>
   						
   						<div class="col">
   						<p> Fruit Edible </p>
-  						<input type="radio" id="fruit_yes" name="fruit_yes" value="fruit_yes">
-						<label for="fruit_yes"> Yes </label><br>
-						<input type="radio" id="fruit_no" name="fruit_no" value="fruit_no">
-						<label for="fruit_no"> No </label><br>
+  						<input type="radio" id="1" name="fruit_edible[]" value="1">
+						<label for="1"> Yes </label><br>
+						<input type="radio" id="0" name="fruit_edible[]" value="0">
+						<label for="0"> No </label><br>
   						</div>
   						
   						<div class="col">
   						<p> Fruit Season </p>
-  						<input type="radio" id="fruit_april" name="fruit_april" value="fruit_april">
-						<label for="fruit_april"> April </label><br>
-  						<input type="radio" id="fruit_may" name="fruit_may" value="fruit_may">
-						<label for="fruit_may"> May </label><br>
-  						<input type="radio" id="fruit_june" name="fruit_june" value="fruit_june">
-						<label for="fruit_june"> June </label><br>
-						<input type="radio" id="fruit_july" name="fruit_july" value="fruit_july">
-						<label for="fruit_july"> July </label><br>
-						<input type="radio" id="fruit_august" name="fruit_august" value="fruit_august">
-						<label for="fruit_august"> August </label><br>
-						<input type="radio" id="fruit_october" name="fruit_october" value="fruit_october">
-						<label for="fruit_october"> October </label><br>
+  						<input type="radio" id="april" name="fruit_season[]" value="april">
+						<label for="april"> April </label><br>
+  						<input type="radio" id="fruit_may" name="fruit_season[]" value="may">
+						<label for="may"> May </label><br>
+  						<input type="radio" id="june" name="fruit_season[]" value="june">
+						<label for="june"> June </label><br>
+						<input type="radio" id="july" name="fruit_season[]" value="july">
+						<label for="july"> July </label><br>
+						<input type="radio" id="fruit_august" name="fruit_season[]" value="august">
+						<label for="august"> August </label><br>
+						<input type="radio" id="october" name="fruit_season[]" value="october">
+						<label for="october"> October </label><br>
   						</div>
   						
   						</div>
@@ -175,6 +193,7 @@ include ("menu.php")?>
 					</div>
 					
 					</div>
+					</form>
 					</div>
 					</div> 
 					<div class="container"> 
