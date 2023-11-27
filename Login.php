@@ -38,7 +38,7 @@
     if (isset($_POST["submitNew"])) {
         $servername = "localhost";
         $username = "root"; // user name
-        $password = "111111"; // password used to login MySQL server
+        $password = "1111"; // password used to login MySQL server
         $dbname = "cs485_labs";
 
         // Create connection
@@ -52,13 +52,13 @@
             $pass = $_POST["pass"];
 
             $check = 0; // if this is >0 then there is already a usersame with that user input
-            $sql = "SELECT username FROM login";
+            $sql = "SELECT Username FROM login";
             $result = $db->query($sql);
 
             if ($result->num_rows > 0) {
                 // output data of each row
                 while ($row = $result->fetch_assoc()) { // info about query"https://www.w3schools.com/php/php_mysql_select.asp
-                    if ($row["username"] == $user) {
+                    if ($row["Username"] == $user) {
                         $check = 1;
                         echo '<script>alert("Username already exists")</script>';
                     }
@@ -66,10 +66,10 @@
             }
 
             if ($check == 0) {
-                $sql_insert = "INSERT INTO loginTable (username, pass) " . "VALUES ('" . $user . "', '" . $pass . "')"; // syntax
+                $sql_insert = "INSERT INTO Login (Username, Pass) " . "VALUES ('" . $user . "', '" . $pass . "')"; // syntax
                 $db->query($sql_insert) or die('Sorry, database operation was failed');
                 session_start();
-                $_SESSION["username"] = $user;
+                $_SESSION["Username"] = $user;
                 header("Location:search_page.php");
                 exit();
             }
@@ -80,7 +80,7 @@
     if (isset($_POST['sub'])) {
         $servername = "localhost";
         $username = "root"; // user name
-        $password = "111111"; // password used to login MySQL server
+        $password = "1111"; // password used to login MySQL server
         $dbname = "cs485_labs";
 
         // Create connection
@@ -94,20 +94,20 @@
         // Use prepared statement in SQL
         $name = $_POST['user'];
         $pass = $_POST['pass'];
-        $sql = "SELECT * FROM login WHERE username = '$name' AND password = '$pass'";
+        $sql = "SELECT * FROM Login WHERE Username = '$name' AND Password = '$pass'";
 
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) { // info about query"https://www.w3schools.com/php/php_mysql_select.asp
-                if ($row["username"] == $name) {
+                if ($row["Username"] == $name) {
                     $check = 1;
-                    if ($row["password"] != $pass) {
+                    if ($row["Password"] != $pass) {
                         echo '<script>alert("Username does not match password")</script>';
                     } else {
                         echo "connected";
                         session_start();
-                        $_SESSION["username"] = $name;
+                        $_SESSION["Username"] = $name;
                         header("Location: search_page.php");
                         exit();
                     }

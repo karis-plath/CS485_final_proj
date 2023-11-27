@@ -10,15 +10,15 @@
 <h1 style = "margin-top:0px; height:12px;">
 <?php
 session_start();
-$user = $_SESSION["username"];
+$user = $_SESSION["Username"];
 ?>
                 <!-- Navbar -->
 		<nav class="navbar navbar-expand-lg nav-bg fixed-top">
 		<div class="navbar-collapse" id="navbarNavAltMarkup">
 				<ul class="nav justify-content-center">
-					<li class="nav-item"><a class="nav-link" href="#">Search</a></li>
+					<li class="nav-item"><a class="nav-link" href="search_page.php">Search</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Postings</a></li>
-					<li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+					<li class="nav-item"><a class="nav-link" href="user_page.php">Profile</a></li>
 	<li class="nav-item"><a class="nav-link" href="Login.php">Logout</a></li>
 			</ul>
 		</div>
