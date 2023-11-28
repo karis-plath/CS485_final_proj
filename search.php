@@ -27,7 +27,7 @@ if ($db->connect_errno > 0) {
         $fruitColor = isset($_POST["fruit_color"]) ? $_POST["fruit_color"] : [];
         $fruitEdible = isset($_POST["fruit_edible"]) ? $_POST["fruit_edible"] : [];
         $fruitSeason = isset($_POST["fruit_season"]) ? $_POST["fruit_season"] : [];
-        $sql = "SELECT Name FROM Plant WHERE PlantID IN ";
+        $sql = "SELECT Name, PlantID FROM Plant WHERE PlantID IN ";
         // Check if any checkboxes were selected
         if (! empty($stemColors)) {
             // Loop through the selected colors
@@ -221,18 +221,18 @@ if ($db->connect_errno > 0) {
         }
         
         while ($row = $r->fetch_assoc()) {
-            echo '<a href="plant_info.php?id=' . $row['Name'] . '">' . $row['Name'] . '</a><br><br>';
+            echo '<a href="plant_details.php?id=' . $row['PlantID'] . '">' . $row['Name'] . '</a><br><br>';
         }
     } // When they just search
     else {
-        $sql = "SELECT Name FROM `Plant` WHERE Name LIKE '%" . $name . "%'";
+        $sql = "SELECT Name, PlantID FROM `Plant` WHERE Name LIKE '%" . $name . "%'";
         $r = $db->query($sql);
         if (mysqli_num_rows($r) === 0) {
             echo "No matching results";
         }
         // $result = array();
         while ($row = $r->fetch_assoc()) {
-            echo '<a href="plant_info.php?id=' . $row['Name'] . '">' . $row['Name'] . '</a><br><br>';
+            echo '<a href="plant_details.php?id=' . $row['PlantID'] . '">' . $row['Name'] . '</a><br><br>';
         }
     }
 }

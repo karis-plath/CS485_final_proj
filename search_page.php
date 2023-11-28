@@ -14,8 +14,7 @@
 </head>
 <body>
         
-	  <?php
-include ("menu.php")?>
+	  <?php include ("menu.php")?>
  
 		
  
@@ -216,7 +215,7 @@ include ("menu.php")?>
  
  
     </script>
-				  <script>
+	<script>
 				  
 				    
                 $("form").submit(
@@ -232,9 +231,7 @@ include ("menu.php")?>
                         );
                     }
                 );
-            </script>
+     </script>
 </body>
-<?php
- 
-?>
+
 </html>
