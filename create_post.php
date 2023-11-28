@@ -24,7 +24,6 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Get user input
-        $Count += 1;
         $plantName = $_POST["plantName"];
         $plantDescription = $_POST["plantDescription"];
         
