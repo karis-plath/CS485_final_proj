@@ -1,13 +1,10 @@
 <!DOCTYPE html>
  
-<html lang = "en">
+<html lang = "en" >
  
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="Style_sheet.css" />
- 
-<header id= "bar">
-<h1 style = "margin-top:0px; height:0px;">
+ <h1 style = "margin-top:0px; height:0px;">
 <?php
 session_start();
 $user = $_SESSION["Username"];

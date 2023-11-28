@@ -1,9 +1,7 @@
 html {
-	/*background-image: url('https://news.winona.edu/wp-content/uploads/2016/04/Arboretum1.jpg');*/
 	background-image: url('https://i.pinimg.com/564x/61/56/04/615604889da7490c142e3c881476c212.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	color: white;
 }
  
  /*login page*/
@@ -26,12 +24,6 @@ html {
 }
 
 /* Box  */
- 
-label{
-	font-size: 18px;
-}
- 
- 
 #data{
 	font-size: 25px;
 	background-color: #ffffffaa;
@@ -87,68 +79,7 @@ label{
 	font-size: 15px;
 }
  
- 
-/* Tree displays */
- 
-.show {
-	border-radius: 0 10px 10px 0;
-}
- 
-#allTree div {
-	font-size: 30px;
-	background-color: rgba(0, 0, 0, 0.246);
-	border-radius: 20px;
-	display: inline-block;
-	width: 690px;
-	padding: 5px 0px 5px 0px;
-}
- 
-img {
-	width: 100px;
-	height: 100px;
-	object-fit: cover;
-	float: left;
-	border-radius: 25%;
-	padding: 20px 0px 20px 20px;
-}
- 
- 
 /* Menu bars */
- 
-#bar_down {
-	background-color: rgb(0, 64, 0);
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 15px;
-	width: 100%;
-	top: 95%;
-	position: fixed;
-	left: 0;
-}
- 
-#bar_down ul {
-	text-align: center;
-	background-color: rgb(0, 64, 0);;
-	width: 100%;
-	padding: 0px;
-}
- 
-#bar_down li {
-	display: inline-block;
-}
- 
-#bar_down li a,
-#menu li span {
-	padding: 0em 1.5em;
-	text-decoration: none;
-	font-weight: 600;
-	text-transform: uppercase;
- 
-}
- 
-#bar_down li a {
-	color: rgb(255, 255, 255);
-	background-color: rgb(0, 64, 0);
-}
  
 #bar_up {
 	background-color: rgb(0, 64, 0);
@@ -242,138 +173,3 @@ img {
 	color: white;
 }
  
- 
-/* Specific search */
- 
-#desc {
-	font-size: 16px;
-}
- 
-.collapsible {
-	background-color: rgb(0, 64, 0);
-	color: #ffffff;
-	cursor: pointer;
-	padding: 18px;
-	width: 100%;
-	border: none;
-	text-align: left;
-	outline: none;
-	font-size: 15px;
-}
- 
-.active,
-.collapsible:hover {
-	background-color: rgb(0, 64, 0);
-}
- 
-.content {
-	padding: 0 18px;
-	display: none;
-	overflow: hidden;
-	background-color: rgb(0, 0, 0, 0.246);
-	color: rgb(255, 255, 255);
-}
- 
- 
-/* Phone view for iPhone SE*/
- 
-@media screen and (max-width: 750px) {
-	html {
-		background-size: 700px 600px;
-	}
- 
-	.openbtn {
-		font-size: 50px;
-		margin-left: 20px;
-	}
- 
-	#bar_up {
-		font-size: 12px;
-	}
- 
-	#menu {
-		font-size: 15px;
-		background-color: rgb(0, 64, 0);
-	}
- 
-	#menu li a {
-		display: inline-block;
-		text-decoration: none;
-		font-weight: 600;
-		padding: 0em .5em;
-		padding-top: 10px;
-		text-transform: uppercase;
-		color: rgb(255, 255, 255);
-		background-color: rgb(0, 64, 0);
-	}
- 
-	#search {
-		height: 300px;
-		width: 300px;
-		margin-top: 150px;
-	}
- 
-	.wrap {
-		width: 300px;
-		position: absolute;
-		top: 20%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		margin-right: 500px;
-		display: flex;
-	}
- 
-	.show {
-		border-radius: 0%;
-		color: #000000;
-	}
- 
-	#allTree div {
-		width: 300px;
-		font-size: 20px;
-		padding: 0px 5px 0px 5px;
-		margin-bottom: 5px;
-	}
- 
-	#desc {
-		font-size: 10px;
-	}
- 
-	img {
-		width: 75px;
-		height: 75px;
-	}
- 
-	#bar_down {
-		font-size: 12px;
-	}
- 
-	#bar_down ul {
-		text-align: center;
-		float: top;
-		background-color: rgb(0, 64, 0);
-		width: 100%;
-		padding: 0px 0px 0px 0px;
-	}
- 
-	#bar_down li {
-		display: inline-block;
-	}
- 
-	#bar_down li a,
-	#menu li span {
-		display: inline-block;
-		padding: 0px 20px;
-		text-decoration: none;
-		font-weight: 600;
-		text-transform: uppercase;
-	}
- 
-	#bar_down li a {
-		color: rgb(255, 255, 255);
-		background-color: rgb(0, 64, 0);
-	}
-}
-
-
-

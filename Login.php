@@ -3,37 +3,37 @@
  
 <head>
 <meta charset="UTF-8">
-<meta name="author" content="Karis and Lindsey">
+<meta name="author" content="Lindsey">
 <link rel="stylesheet" href="Style_sheet.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <title>Login</title>
 </head>
-<div class="d-flex justify-content-center container">
- 
-  <body id ="blur">
-        <div id ="clear">
-<h1>Login</h1>
-	<form method=POST>
-		<div class="input-group">
-			<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-			<input id="user" type="text" class="form-control well-sm input-lg" name="user"
-				placeholder="Username">
-		</div>
-		<div class="input-group">
-			<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-			<input id="pass" type="text" class="form-control well-sm input-lg"
-				name="pass" placeholder="Password">
-		</div>
-		 <button name="sub" type="submit" class="btn btn-default">Login</button>
-		  <button name="submitNew" type="submit" class="btn btn-default">Create New User</button>
-	</form>
-</div>
-</div>
-    <?php
+
+<body id ="blur">
+    <div class="d-flex justify-content-center container">
+      	<div id ="clear">
+    		<h1>Login</h1>
+    		<form method=POST>
+    			<div class="input-group">
+    				<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    				<input id="user" type="text" class="form-control well-sm input-lg" name="user" placeholder="Username">
+    			</div>
+    			<div class="input-group">
+    				<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    				<input id="pass" type="password" class="form-control well-sm input-lg" name="pass" placeholder="Password">
+    			</div>
+    			<button name="sub" type="submit" class="btn btn-default">Login</button>
+    			<button name="submitNew" type="submit" class="btn btn-default">Create New User</button>
+    		</form>
+    	</div>
+    </div>
+
+<?php
  
     // Report all error information on the webpage
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
+    
     // submitting new user and pass
     if (isset($_POST["submitNew"])) {
         $servername = "localhost";
@@ -120,6 +120,7 @@
         $result->close();
         $conn->close();
     }
-    ?>
-    </body>
+?>
+
+</body>
 </html>
